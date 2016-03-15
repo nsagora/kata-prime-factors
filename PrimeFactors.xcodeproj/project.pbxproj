@@ -10,6 +10,7 @@
 		FABEFF921C2083C5001E2651 /* PrimeFactors.h in Headers */ = {isa = PBXBuildFile; fileRef = FABEFF911C2083C5001E2651 /* PrimeFactors.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		FABEFF991C2083C5001E2651 /* PrimeFactors.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FABEFF8E1C2083C5001E2651 /* PrimeFactors.framework */; };
 		FABEFF9E1C2083C5001E2651 /* PrimeFactorsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABEFF9D1C2083C5001E2651 /* PrimeFactorsTests.swift */; };
+		FABEFFA91C20844A001E2651 /* PrimeFactors.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABEFFA81C20844A001E2651 /* PrimeFactors.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +30,7 @@
 		FABEFF981C2083C5001E2651 /* PrimeFactorsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PrimeFactorsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FABEFF9D1C2083C5001E2651 /* PrimeFactorsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrimeFactorsTests.swift; sourceTree = "<group>"; };
 		FABEFF9F1C2083C5001E2651 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FABEFFA81C20844A001E2651 /* PrimeFactors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrimeFactors.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +75,7 @@
 			children = (
 				FABEFF911C2083C5001E2651 /* PrimeFactors.h */,
 				FABEFF931C2083C5001E2651 /* Info.plist */,
+				FABEFFA81C20844A001E2651 /* PrimeFactors.swift */,
 			);
 			path = PrimeFactors;
 			sourceTree = "<group>";
@@ -194,6 +197,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FABEFFA91C20844A001E2651 /* PrimeFactors.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -308,6 +312,7 @@
 		FABEFFA31C2083C5001E2651 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -318,12 +323,14 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.nsagora.PrimeFactors;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
 		FABEFFA41C2083C5001E2651 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;

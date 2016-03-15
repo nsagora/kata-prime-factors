@@ -9,28 +9,49 @@
 import XCTest
 @testable import PrimeFactors
 
-class PrimeFactorsTests: XCTestCase {
-    
-    override func setUp() {
-        super.setUp()
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+class PrimeFactorsTests: XCTestCase {    
+    func testFactorsFor1() {
+        let factors = PrimeFactors.generate(1)
+        XCTAssertEqual(factors, [])
     }
     
-    override func tearDown() {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
-        super.tearDown()
+    func testFactorsFor2() {
+        let factors = PrimeFactors.generate(2)
+        XCTAssertEqual(factors, [2])
     }
     
-    func testExample() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+    func testFactorsFor3() {
+        let factors = PrimeFactors.generate(3)
+        XCTAssertEqual(factors, [3])
     }
     
-    func testPerformanceExample() {
-        // This is an example of a performance test case.
-        self.measureBlock {
-            // Put the code you want to measure the time of here.
-        }
+    func testFactorsFor4() {
+        let factors = PrimeFactors.generate(4)
+        XCTAssertEqual(factors, [2,2])
     }
     
+    func testFactorsFor5() {
+        let factors = PrimeFactors.generate(5)
+        XCTAssertEqual(factors, [5])
+    }
+    
+    func testFactorsFor6() {
+        let factors = PrimeFactors.generate(6)
+        XCTAssertEqual(factors, [2,3])
+    }
+    
+    func testFactorsFor8() {
+        let factors = PrimeFactors.generate(8)
+        XCTAssertEqual(factors, [2,2,2])
+    }
+    
+    func testFactorsFor9() {
+        let factors = PrimeFactors.generate(9)
+        XCTAssertEqual(factors, [3, 3])
+    }
+    
+    func testFactorsFor490() {
+        let factors = PrimeFactors.generate(490)
+        XCTAssertEqual(factors, [2,5,7,7])
+    }
 }
